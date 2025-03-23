@@ -1,0 +1,888 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header */
+
+
+header {
+    position: relative;
+    background: linear-gradient(135deg, #17484C, #2a6d79);
+    color: white;
+    border-bottom: 4px solid #f4f4f4;
+    padding: 20px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: #45a29e;
+    transform: translateY(-3px);
+}
+.contenedor {
+    padding: 60px 0;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.titulo {
+    color: #193C3E;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+
+
+
+
+
+
+
+/* Estilo para el contenedor de la barra cuando se convierte en menú */
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos para el menú en pantallas pequeñas (móviles) */
+.menu-mobile {
+    display: none;
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 30px;
+    color: #fff;
+    padding: 10px;
+    background-color: #333;
+    border: none;
+}
+/* Estilo de los textos en el header */
+.textos-header {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.textos-header h1 {
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.textos-header h2 {
+    font-size: 26px;
+    font-weight: 300;
+    margin-top: 5px;
+    letter-spacing: 1px;
+}
+
+/* Estilo de la ola */
+.wave {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* About us */
+
+main .sobre-nosotros{
+    padding: 30px 0 60px 0;
+}
+.contenedor-sobre-nosotros{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.imagen-about-us{
+    width: 48%;
+}
+
+.sobre-nosotros .contenido-textos{
+    width: 48%;
+}
+
+.contenido-textos h3{
+    margin-bottom: 15px;
+}
+
+.contenido-textos h3 span{
+    background: #007766;
+    color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    padding: 2px;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+    margin-right: 5px;
+}
+
+.contenido-textos p{
+    padding: 0px 0px 30px 15px;
+    font-weight: 300;
+    text-align: justify;
+}
+
+/* Galeria */
+
+
+.portafolio{
+    background: #F2F1ED;
+}
+
+.galeria-port{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.imagen-port{
+    width: 24%;
+    margin-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+}
+
+.imagen-port > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hover-galeria{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    transform: scale(0);
+    background: rgb(128,199,165, 0.7);
+    transition: transform .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hover-galeria img{
+    width: 50px;
+}
+
+.hover-galeria p{
+    color: #fff;
+}
+
+.imagen-port:hover .hover-galeria{
+    transform: scale(1);
+}
+/*scroll*/
+.scrollable-content {
+    max-height: 200px; /* Establece una altura máxima para el contenido */
+    overflow-y: auto; /* Agrega el scroll vertical cuando el contenido exceda la altura */
+    padding: 10px;
+}
+
+.scrollable-content p {
+    margin: 0;
+    line-height: 1.6;
+}
+/* Clients */
+
+.cards {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.cards .card {
+    background: #68BD9E;
+    display: flex; /* Usamos flex para alinear los elementos en una fila */
+    flex-direction: row; /* Organiza los elementos en una fila (horizontalmente) */
+    align-items: center; /* Centra verticalmente la imagen y el texto */
+    justify-content: flex-start; /* Alinea los elementos al principio (izquierda) */
+    width: 100%; /* Ajusta el ancho de la tarjeta */
+    height: 200px; /* Ajusta la altura de la tarjeta */
+    border-radius: 5px;
+    padding: 15px; /* Espaciado interno para las tarjetas */
+    transition: transform 0.3s ease; /* Transición suave para el hover */
+    cursor: pointer; /* Cambia el cursor al pasar el ratón */
+    overflow: hidden; /* Evita que los elementos se desborden fuera de la tarjeta */
+}
+
+/* Efecto hover en la tarjeta */
+.cards .card:hover {
+    transform: scale(1.05); /* Agranda ligeramente la tarjeta */
+}
+
+.cards .card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    margin-right: 15px; /* Añade espacio entre la imagen y el texto */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto hover sobre la imagen */
+.cards .card img:hover {
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño de la imagen */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Agrega sombra para darle profundidad */
+}
+
+.cards .card .contenido-texto-card {
+    width: 100%; /* Hace que el texto ocupe todo el ancho disponible */
+    text-align: left; /* Alinea el texto a la izquierda */
+    color: #fff;
+}
+
+.cards .card .contenido-texto-card h4 {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.cards .card .contenido-texto-card p {
+    font-weight: 200;
+    padding-top: 5px;
+}
+
+/*  Our team */
+
+/* Sección de información */
+.about-services {
+    padding: 50px 0;
+    background-color: #f4f4f4;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.titulo {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #17484C;
+}
+
+/* Contenedor de los servicios */
+.servicio-cont {
+    display: flex;
+    justify-content: space-between;  /* Distribuye el espacio entre los elementos */
+    gap: 30px;  /* Espacio entre las tarjetas */
+    flex-wrap: wrap;  /* Asegura que se acomoden de manera responsiva en pantallas pequeñas */
+}
+
+/* Estilo de cada servicio */
+.servicio-ind {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%;  /* Cada servicio ocupa el 30% del ancho del contenedor */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto de hover sobre cada servicio */
+.servicio-ind:hover {
+    transform: scale(1.05);  /* Hace que el servicio se agrande al pasar el ratón */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);  /* Sombra más intensa en hover */
+}
+
+/* Imágenes dentro de los servicios */
+.servicio-ind img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* Estilo de los títulos dentro de los servicios */
+.servicio-ind h3 {
+    font-size: 20px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Estilo de los párrafos dentro de los servicios */
+.servicio-ind p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* footer */
+/* Estilo general para el footer */
+footer {
+    background-color:#17484C;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Contenedor para los elementos del footer */
+.contenedor-footer {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 20px;
+}
+
+/* Estilo para cada bloque dentro del footer */
+.content-foo {
+    max-width: 200px;
+}
+
+.content-foo  {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.content-foo  {
+    font-size: 16px;
+}
+
+.social-media {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #fff;
+    border: 2px solid #ddd;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.social-icon i {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.social-icon.facebook {
+    background-color: #3b5998;
+    border-color: #3b5998;
+}
+
+.social-icon.whatsapp {
+    background-color: #25d366;
+    border-color: #25d366;
+}
+
+.social-icon:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.social-icon:active {
+    transform: translateY(1px);
+}
+
+
+
+/* Estilo para el enlace con icono */
+.navigate-link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Espaciado entre el icono y el texto */
+}
+
+/* Efecto hover para el enlace */
+.navigate-link:hover {
+    color: #DCB784;
+}
+
+/* Estilo del icono */
+.navigate-link i {
+    font-size: 20px;
+}
+
+/* Estilo para el texto final */
+.titulo-final {
+    font-size: 14px;
+    margin-top: 20px;
+    color: #ccc;
+}
+
+
+.titulo-final{
+    text-align: center;
+    font-size: 24px;
+    margin: 20px 0 0 0;
+    color: #9e9797;
+}
+
+
+/* Estilo para el enlace */
+.content-foo {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Estilo para el enlace con el icono */
+.navigate-link {
+    text-decoration: none;
+    color: #ccc;;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px; /* Espaciado entre el icono y el texto */
+}
+/*btncomida*/
+.btn-comida {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #FF5733; /* Color apetitoso para la comida */
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    text-decoration: none;
+    border-radius: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 20px;
+}
+
+.btn-comida:hover {
+    background-color: #FF4500; /* Color ligeramente más oscuro */
+    transform: scale(1.05);
+}
+
+.btn-comida:focus {
+    outline: none;
+}
+
+/*btn*/
+.btn-redireccion {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #1a696e;
+    color: #DCB784;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.btn-redireccion:hover {
+    background-color: #17484C;
+}
+
+
+/* Efecto de hover */
+.navigate-link:hover {
+    color: #DCB784;
+}
+
+/* Estilo para el icono */
+.navigate-link i {
+    font-size: 20px; /* Tamaño del icono */
+}
+
+
+@media screen and (max-width:1000px){
+    header{
+        background-position: center;
+    }
+
+    .contenedor-sobre-nosotros{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sobre-nosotros .contenido-textos{
+        width: 90%;
+    }
+
+    .imagen-about-us{
+        width: 90%;
+    }
+
+    /* Galeria */
+
+    .imagen-port{
+        width: 44%;
+    }
+
+    /* Clientes */
+
+    
+
+    /* servicios */
+
+    /* Estilos generales para la sección */
+.about-services {
+    background-color: #f4f4f4;
+    padding: 50px 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.titulo {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.servicio-cont {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Estilos para cada servicio individual */
+.servicio-ind {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 280px;
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+}
+
+.servicio-ind:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.servicio-ind img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.servicio-ind h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.servicio-ind p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.servicio-ind ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.servicio-ind ul li {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.servicio-ind ul li strong {
+    color: #333;
+}
+
+
+    
+}
+
+@media screen and (max-width:500px){
+   
+
+    /* ABOUT US */
+
+    .imagen-about-us{
+        margin-bottom: 60px;
+        width: 99%;
+    }
+
+    .sobre-nosotros .contenido-textos{
+        width: 95%;
+    }
+
+    /* Galeria */
+
+    .imagen-port{
+        width: 95%;
+    }
+
+    /* Clients */
+
+    .cards .card{
+        height: 450px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cards .card img{
+        width: 90px;
+        height: 90px;
+    }
+
+    /* Footer */
+
+    .contenedor-footer{
+        flex-direction: column;
+        border: none;
+        
+    }
+
+    .content-foo{
+        margin-bottom: 20px;
+        text-align: center;
+       
+    }
+
+    .content-foo h4{
+        border: none;
+    }
+
+    .content-foo p{
+        color: #f2f2f2;
+        border-bottom: 1px solid #f2f2f2;
+        padding-bottom: 20px;
+        
+    }
+
+    .titulo-final{
+        font-size: 20px;
+    }
+
+    @media (max-width: 900px) {
+        .cards {
+            justify-content: center;
+        }
+    
+        .cards .card {
+            width: 300px; /* Ajusta el tamaño de la tarjeta en pantallas pequeñas */
+            height: 400px;
+        }
+    
+        .cards .card img {
+            width: 90px; /* Ajusta el tamaño de la imagen en pantallas pequeñas */
+            height: 90px;
+        }
+    }
+    /* Estilo de la sección */
+.horarios {
+    background-color: #f4f4f4;
+    padding: 40px 0;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.titulo {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Estilos de la tabla de horarios */
+/* Estilo de la sección */
+.horarios {
+    background-color: #f4f4f4;
+    padding: 40px 0;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.titulo {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Estilo de la tabla de horarios */
+/* Estilo de la sección */
+.horarios {
+    background-color: #f4f4f4;
+    padding: 40px 0;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.titulo {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Estilo de la tabla de horarios */
+.tabla-horarios {
+    display: flex;
+    justify-content: space-between;  /* Para separar las dos columnas */
+    gap: 40px;  /* Aumentamos el espacio entre las columnas */
+    flex-wrap: wrap;  /* Permite que se acomode en pantallas pequeñas */
+}
+
+.columna {
+    flex: 1;
+    min-width: 300px; /* Para asegurarse de que cada columna tenga un tamaño adecuado */
+    box-sizing: border-box;
+}
+
+.estacion {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.estacion h3 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.estacion p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Responsividad */
+@media (max-width: 1024px) {
+    .tabla-horarios {
+        flex-direction: column; /* En pantallas más pequeñas, las columnas se apilan */
+        align-items: center; /* Centra las columnas */
+    }
+}
+
+@media (max-width: 768px) {
+    .tabla-horarios {
+        flex-direction: column; /* Asegura que todo quede en una columna en pantallas móviles */
+        align-items: center; /* Centra los elementos */
+    }
+
+    .columna {
+        width: 100%; /* Asegura que cada columna ocupe todo el ancho en pantallas pequeñas */
+    }
+}
+/* Estilos para pantallas más pequeñas (por ejemplo, móviles) */
+/* Estilos para pantallas más pequeñas */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+    }
+
+    nav a {
+        margin: 8px 0;
+        font-size: 16px;
+    }
+
+    .textos-header h1 {
+        font-size: 36px;
+    }
+
+    .textos-header h2 {
+        font-size: 22px;
+    }
+}
+
+/* Estilos para pantallas aún más pequeñas (móviles en vertical) */
+@media (max-width: 480px) {
+    nav a {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+
+    .textos-header h1 {
+        font-size: 28px;
+    }
+
+    .textos-header h2 {
+        font-size: 18px;
+    }
+}
+
+}
